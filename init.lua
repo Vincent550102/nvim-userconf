@@ -66,7 +66,7 @@ return {
       },
     },
   },
-  vim.api.nvim_set_keymap("i", "<C-d>", 'copilot#Accept("<CR>")', { silent = true, expr = true }),
+  vim.api.nvim_set_keymap("i", "<C-f>", 'copilot#Accept("<CR>")', { silent = true, expr = true }),
 
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so
