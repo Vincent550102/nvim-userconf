@@ -1,6 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
-    ensure_installed = { "yaml", "python", "typescript" },
+    ensure_installed = { "yaml", "python", "javascript", "typescript" },
   },
 }
