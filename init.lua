@@ -33,7 +33,9 @@ return {
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          "python"
+          "python",
+          "javascript",
+          "typescript"
           -- "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
@@ -52,7 +54,7 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       "pyright",
-      "tsserver"
+      "eslint"
     },
   },
 
