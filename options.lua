@@ -30,6 +30,7 @@ return {
         ["c++"] = true,
         ["go"] = true,
         ["python"] = true,
+        ["sh"] = true,
     }
   }
 }

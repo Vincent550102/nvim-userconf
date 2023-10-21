@@ -35,8 +35,9 @@ return {
         allow_filetypes = { -- enable format on save for specified filetypes only
           "python",
           "javascript",
-          "typescript"
-          -- "go",
+          "typescript",
+          "c",
+          "c++"
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
@@ -54,7 +55,15 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       "pyright",
-      "denols"
+      "denols",
+      "clangd"
+    },
+    config = {
+      clangd = {
+        capabilities = {
+          offsetEncoding = "utf-8",
+        },
+      },
     },
   },
 
