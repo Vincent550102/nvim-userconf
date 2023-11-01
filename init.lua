@@ -55,7 +55,6 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       "pyright",
-      "denols",
       "clangd"
     },
     config = {
@@ -63,8 +62,22 @@ return {
         capabilities = {
           offsetEncoding = "utf-8",
         },
+        extra_args = { "--style", "{IndentWidth: 4}" }
       },
+      denols = function(opts)
+        opts.root_dir = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")
+        return opts
+      end,
+      tsserver = function(opts)
+        opts.root_dir = require("lspconfig.util").root_pattern("package.json")
+        return opts
+      end,
     },
+    setup_handlers = {
+      -- add custom handler
+      denols = function(_, opts) require("deno-nvim").setup { server = opts } end
+    }
+
   },
 
   -- Configure require("lazy").setup() options
