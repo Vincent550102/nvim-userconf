@@ -33,11 +33,11 @@ return {
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          "python",
-          "javascript",
-          "typescript",
-          "c",
-          "c++"
+          -- "python",
+          -- "javascript",
+          -- "typescript",
+          -- "c",
+          -- "c++"
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
@@ -68,10 +68,10 @@ return {
         opts.root_dir = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")
         return opts
       end,
-      tsserver = function(opts)
-        opts.root_dir = require("lspconfig.util").root_pattern("package.json")
-        return opts
-      end,
+      -- tsserver = function(opts)
+      --   opts.root_dir = require("lspconfig.util").root_pattern("package.json")
+      --   return opts
+      -- end,
     },
     setup_handlers = {
       -- add custom handler

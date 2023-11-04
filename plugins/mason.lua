@@ -14,7 +14,7 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
       ensure_installed = { "stylua", "autopep8", "pyright", "clangd" },
-    },
+    }
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
@@ -22,5 +22,6 @@ return {
     opts = {
       -- ensure_installed = { "python" },
     },
+    
   },
 }
